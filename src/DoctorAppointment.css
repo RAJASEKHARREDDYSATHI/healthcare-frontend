@@ -1,0 +1,57 @@
+/* DoctorAppointment.css */
+.doctor-appointments-container {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+.doctor-appointments-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.appointments-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.appointments-table th,
+.appointments-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.appointments-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.appointments-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.appointments-table td a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.appointments-table td a:hover {
+    text-decoration: underline;
+}
+
+.loading-message {
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    color: #777;
+}
+
+.error-message {
+    color: red;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid red;
+    background-color: #ffe0e0;
+    border-radius: 5px;
+}

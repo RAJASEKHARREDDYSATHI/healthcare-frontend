@@ -1,0 +1,93 @@
+/* Fixed Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex; /* Enable flexbox for header layout */
+    align-items: center;
+    justify-content: space-between; /* Distribute space between logo/text and user info */
+    padding: 0 15px;
+    background: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Left: Logo and Text Container */
+.header .logo-container {
+    display: flex; /* Align logo and text horizontally */
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    margin-right: 5px; /* Space between logo and text */
+}
+
+.logoText {
+    font-size: 20pt;
+    font-weight: bold;
+    color: #2d74be;
+    margin-left: 0; /* Reset default margin */
+}
+
+.logoText span {
+    color: #3c4256;
+}
+
+/* Right: User Info (Fullname and Logout) Container */
+.header .user-section {
+    display: flex; /* Align fullname and logout horizontally */
+    align-items: center;
+    gap: 10px; /* Space between fullname and logout icon */
+    margin-right: 15px;
+}
+
+.header label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #2d2d2d;
+}
+
+.logout {
+    width: 26px;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.logout:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+}
+
+/* Layout Container */
+.dashboard {
+    padding-top: 70px; /* Prevents overlap with header */
+    display: flex; /* Enable flexbox for overall dashboard layout */
+}
+
+/* Sidebar */
+.menu {
+    width: 200px;
+    height: calc(100vh - 70px);
+    background: white;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+    box-sizing: border-box;
+    position: fixed; /* Make the sidebar fixed */
+    left: 0; /* Stick it to the left */
+    top: 70px; /* Position it below the header */
+}
+
+/* Content Area */
+.outlet {
+    flex-grow: 1; /* Take remaining horizontal space */
+    min-height: calc(100vh - 70px); /* full height minus header */
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center; /* horizontal centering */
+    align-items: center; /* vertical centering */
+    margin-left: 200px; /* Account for the sidebar width */
+}

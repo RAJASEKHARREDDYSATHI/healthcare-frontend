@@ -1,0 +1,246 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/body.png.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+/* Header Styles */
+#header {
+    width: 100%;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-radius: 0 0 8px 8px; /* Optional: Rounded bottom corners */
+}
+
+.logo-and-text {
+    display: flex;
+    align-items: center;
+}
+
+#header .logo {
+    width: 30px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and text */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#header .logoText {
+    font-size: 24pt;
+    font-weight: bold;
+    color: #e90b3b;
+    margin-left: 0;
+    float: none;
+}
+
+#header .logoText span {
+    color: #2D7ABE;
+}
+
+.user-info {
+    display: flex; /* Keep it as flex to align items horizontally */
+    align-items: center; /* Vertically align items */
+}
+
+
+
+
+
+.signin-button {
+    background-color:#3498db; /* Green color */
+    color: white;
+    border: none;
+    padding: 8px 12px; /* Adjusted padding for a button look */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-right: 0;
+    position: relative;
+    top: 0;
+    height: auto;
+    line-height: normal;
+}
+
+.signin-button:hover {
+    background-color: #3498db;
+}
+
+/* Content Styles */
+#content {
+    width: 100%;
+    height: calc(100% - 70px); /* Adjusted height to accommodate header */
+    background: #fdf1f4;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Popup Styles - Smaller Window */
+#popup {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 999;
+    display: none;
+    backdrop-filter: blur(5px);
+}
+
+#popupwindow {
+    width: 350px; /* Slightly reduced width */
+    position: relative;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+#popupheader {
+    width: 100%;
+    height: 50px; /* Reduced header height */
+    line-height: 50px;
+    background: #3498db;
+    color: #fff;
+    font-size: 16pt; /* Slightly smaller header font */
+    font-weight: bold;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#signin,
+#signup {
+    width: calc(100% - 30px);
+    padding: 15px;
+    background: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: none;
+}
+
+#signin.active,
+#signup.active {
+    display: block;
+}
+
+#signin .usernameLabel,
+#signin .passwordLabel,
+#signup label {
+    display: block;
+    padding: 10px 0px 3px 0px; /* Reduced label padding */
+    color: #555;
+    font-weight: bold;
+    font-size: 10pt; /* Smaller label font */
+}
+
+input,
+select {
+    width: calc(100% - 10px);
+    height: 35px; /* Smaller input height */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 6px; /* Reduced input padding */
+    font-size: 10pt; /* Smaller input font */
+    margin-bottom: 8px; /* Reduced margin below inputs */
+}
+
+#signin .forgotPassword {
+    display: block;
+    height: 25px; /* Reduced height */
+    line-height: 25px;
+    text-align: right;
+    margin-top: 3px; /* Reduced margin */
+}
+
+#signin .forgotPassword label {
+    color: #3498db;
+    cursor: pointer;
+    font-size: 9pt; /* Smaller font */
+}
+
+#signin .forgotPassword label:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+#signin .signinButton,
+#signup button {
+    width: 100%;
+    height: 40px; /* Smaller button height */
+    background: #3498db;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 11pt; /* Smaller button font */
+    font-weight: bold;
+    margin-top: 15px; /* Reduced margin */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
+}
+
+#signin .signinButton:hover,
+#signup button:hover {
+    background: #3498db;
+}
+
+#signin .div1,
+#signup div {
+    width: 100%;
+    padding-top: 15px; /* Reduced padding */
+    text-align: center;
+    color: #777;
+    font-size: 8pt; /* Smaller font */
+}
+
+#signin .div2 label,
+#signup div span {
+    display: inline-block;
+    color: #3498db;
+    font-size: 10pt; /* Smaller font */
+    font-weight: bold;
+    padding-top: 8px; /* Reduced padding */
+    cursor: pointer;
+    transition: color 0.3s ease;
+    border-radius: 5px;
+    padding: 3px 5px; /* Smaller padding */
+}
+
+#signin .div2 label:hover,
+#signup div span:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}

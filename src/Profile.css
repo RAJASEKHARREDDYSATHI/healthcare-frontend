@@ -1,0 +1,56 @@
+/* Profile.css */
+
+.profile-info-container {
+  background-color: #fff; /* Clean white background */
+  padding: 30px; /* Increased padding for better spacing */
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Softer, more modern shadow */
+  width: 350px; /* Slightly wider for better readability */
+  /* Center horizontally and vertically */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: box-shadow 0.3s ease-in-out; /* Smooth shadow transition on hover */
+  font-weight: bold;
+}
+
+.profile-info-container:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+.profile-info-container h2 {
+  color: #2c3e50; /* Darker, professional heading color */
+  text-align: center;
+  margin-bottom: 25px; /* More space below the heading */
+  font-size: 2.0em; /* Slightly larger heading */
+  font-weight: 500; /* Lighter bold for a modern feel */
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; /* Increased margin for better separation */
+}
+
+.info-item label {
+  font-weight: 600; /* Slightly bolder label */
+  margin-right: 15px; /* More space between label and value */
+  color: #555;
+  width: 120px; /* Adjusted label width for better alignment */
+  text-align: left;
+}
+
+.info-item span {
+  color: #34495e; /* Darker text for the value */
+  font-size: 1.05em; /* Slightly larger value text */
+}
+
+/* Optional styling for the dashboard container if you still want it */
+.header {
+  text-align: center; /* Example: center header content */
+  padding: 15px; /* Slightly more padding */
+  background-color: #f0f0f0; /* Lighter background */
+  margin-bottom: 20px; /* More bottom margin */
+  border-bottom: 1px solid #ddd; /* Subtle bottom border */
+}
