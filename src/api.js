@@ -1,4 +1,4 @@
-export const BASEURL = "http://localhost:8085/";
+export const BASEURL = "http://localhost:8085/JobPortal-0.0.1-SNAPSHOT/";
 
 
 export function callApi(reqmethod, url, data, responseHandler, errorHandler) {
