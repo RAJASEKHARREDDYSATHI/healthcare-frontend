@@ -1,4 +1,5 @@
-export const BASEURL = "http://localhost:8085/healthcare/";
+export const BASEURL = "http://localhost:8085/JobPortal-0.0.1-SNAPSHOT/";
+
 
 export function callApi(reqmethod, url, data, responseHandler, errorHandler) {
   let options;
@@ -21,7 +22,7 @@ export function callApi(reqmethod, url, data, responseHandler, errorHandler) {
     };
   }
 
-  fetch(url, options)
+  fetch(BASEURL + url, options)
     .then(response => {
       if (!response.ok)
         throw new Error(response.status + " " + response.statusText);
